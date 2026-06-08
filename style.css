@@ -1,0 +1,62 @@
+/* Общие стили */
+*{margin:0; padding:0; box-sizing:border-box; font-family:'Orbitron',sans-serif;}
+body{background:radial-gradient(circle at top,#24113a,#12071f,#07020c); color:white; min-height:100vh; overflow-x:hidden;}
+
+#particles-js{position:fixed; width:100%; height:100%; top:0; left:0; z-index:-2;}
+.container{width:90%; max-width:1300px; margin:auto;}
+
+/* Header */
+header{text-align:center; padding:40px 20px;}
+.logo{font-size:5rem; font-weight:900; letter-spacing:10px; animation:neonPulse 3s infinite;}
+.subtitle{margin-top:10px; letter-spacing:4px; color:#c77dff;}
+
+@keyframes neonPulse{
+0%,100%{text-shadow:0 0 10px #c77dff,0 0 20px #c77dff,0 0 40px #c77dff;}
+50%{text-shadow:0 0 20px #c77dff,0 0 40px #c77dff,0 0 80px #9d4edd,0 0 120px #7b2cbf;}
+}
+
+/* Карточки */
+.stats{display:flex; justify-content:center; gap:25px; flex-wrap:wrap; margin:30px 0;}
+.card{width:250px; padding:25px; background:rgba(255,255,255,.05); backdrop-filter:blur(12px); border:1px solid rgba(199,125,255,.2); border-radius:20px; text-align:center; transition:.4s; position:relative; overflow:hidden;}
+.card i{font-size:2rem; margin-bottom:15px; color:#c77dff;}
+.card::before{content:""; position:absolute; width:200%; height:200%; background:linear-gradient(45deg,transparent,rgba(199,125,255,.2),transparent); top:-100%; left:-100%; transition:1s;}
+.card:hover::before{top:100%; left:100%;}
+.card:hover{transform:translateY(-10px); box-shadow:0 0 20px #c77dff,0 0 60px rgba(199,125,255,.4);}
+
+/* Слайдер */
+.slider{margin-top:40px; height:750px; position:relative; overflow:hidden; border-radius:25px; border:1px solid rgba(199,125,255,.2); box-shadow:0 0 30px rgba(199,125,255,.2);}
+.slide{position:absolute; width:100%; height:100%; opacity:0; transform:scale(1.15) rotate(2deg); filter:blur(8px); transition:opacity 1s ease, transform 1.4s ease, filter 1.4s ease;}
+.slide.active{opacity:1; transform:scale(1) rotate(0deg); filter:blur(0);}
+.slide img{width:100%; height:100%; object-fit:cover;}
+.slide::after{content:""; position:absolute; left:0; top:0; width:100%; height:100%; background:linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.15));}
+.slide-content{position:absolute; bottom:50px; left:50px; z-index:2;}
+.slide-content h2{font-size:2.5rem; margin-bottom:15px;}
+.slide-content p{font-size:1.1rem; color:#d4f8ff;}
+.slider:hover{box-shadow:0 0 20px #c77dff,0 0 50px #c77dff66,0 0 100px #9d4edd;}
+.slider-dots{position:absolute; bottom:20px; left:50%; transform:translateX(-50%); display:flex; gap:10px; z-index:5;}
+.dot{width:12px; height:12px; border-radius:50%; background:#fff4; transition:.3s;}
+.active-dot{background:#c77dff; box-shadow:0 0 10px #c77dff;}
+
+/* Кнопки */
+.buttons{margin:50px 0; display:flex; flex-direction:column; align-items:center; gap:20px;}
+.book-btn{width:450px; height:80px; border:none; border-radius:18px; font-size:1.3rem; font-weight:700; cursor:pointer; color:white; background:linear-gradient(135deg,#c77dff,#7b2cbf); transition:.4s; position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; gap:12px; text-decoration:none;}
+.book-btn::before{content:""; position:absolute; left:-120%; top:0; width:100%; height:100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent); transition:.7s;}
+.book-btn:hover::before{left:120%;}
+.book-btn:hover{transform:scale(1.05); box-shadow:0 0 20px #c77dff,0 0 40px #9d4edd,0 0 80px #7b2cbf;}
+.socials{display:flex; gap:20px;}
+.social-btn{width:220px; height:60px; display:flex; align-items:center; justify-content:center; gap:10px; text-decoration:none; color:white; border-radius:15px; transition:.3s;}
+.whatsapp{background:linear-gradient(135deg,#9d4edd,#7b2cbf);}
+.telegram{background:linear-gradient(135deg,#c77dff,#9d4edd);}
+.social-btn:hover{transform:translateY(-5px) scale(1.05);}
+.whatsapp:hover{box-shadow:0 0 25px #9d4edd;}
+.telegram:hover{box-shadow:0 0 25px #c77dff;}
+footer{padding:40px; text-align:center; color:#8ebecb;}
+
+/* Адаптив */
+@media(max-width:768px){
+  .logo{font-size:3rem;}
+  .slider{height:350px;}
+  .book-btn{width:90%;}
+  .socials{flex-direction:column;}
+  .social-btn{width:280px;}
+}
