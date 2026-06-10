@@ -1,7 +1,7 @@
 /* Частицы */
 particlesJS("particles-js",{
 particles:{
-number:{value:80,density:{enable:true,value_area:800}},
+number:{value:40,density:{enable:true,value_area:400}},
 color:{value:"#c77dff"},
 shape:{type:"circle"},
 opacity:{value:0.5,random:true},
