@@ -1,4 +1,4 @@
-/* Частицы */
+
 particlesJS("particles-js",{
 particles:{
 number:{value:40,density:{enable:true,value_area:400}},
@@ -17,7 +17,7 @@ modes:{grab:{distance:180,line_linked:{opacity:1}},push:{particles_nb:4}}
 retina_detect:true
 });
 
-/* Слайдер */
+
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 let currentSlide = 0;
@@ -29,19 +29,19 @@ function showSlide(index){
   dots[index].classList.add('active-dot');
 }
 
-/* Автопереключение */
+
 setInterval(()=>{
   currentSlide++;
   if(currentSlide >= slides.length) currentSlide = 0;
   showSlide(currentSlide);
 },50000);
 
-/* Клик по точкам */
+
 dots.forEach((dot,index)=>{
   dot.addEventListener('click',()=>{currentSlide=index; showSlide(index);});
 });
 
-/* Клик по слайду */
+
 const slider = document.querySelector('.slider');
 slider.addEventListener('click', ()=>{
   currentSlide++;
