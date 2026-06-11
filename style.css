@@ -78,4 +78,8 @@ footer{padding:40px; text-align:center; color:#8ebecb;}
   .book-btn{width:90%;}
   .socials{flex-direction:column;}
   .social-btn{width:280px;}
+  .glass-text{font-size: 1.2rem;}
+  .slide-content h2{font-size:1rem; margin-bottom:5px;}
+  .slide-content p{font-size:0.5rem; color:#d4f8ff;}
+  .slide-content{bottom: 40px; left: 30px;}
 }
