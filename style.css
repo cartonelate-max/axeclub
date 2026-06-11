@@ -8,7 +8,7 @@ body{background:radial-gradient(circle at top,#24113a,#12071f,#07020c); color:wh
 header{text-align:center; padding:40px 20px;}
 .logo{font-size:5rem; font-weight:900; letter-spacing:10px; animation:neonPulse 3s infinite;text-align: center;}
 .subtitle{margin-top:10px; letter-spacing:4px; color:#c77dff; font-family: 'Pliant'; font-weight: 600;}
-.price{font-size: 3rem; letter-spacing: 2px; text-align: center;font-family: "Huninn", sans-serif; font-weight: 400; font-style: normal;}
+.price{font-size: 3rem; letter-spacing: 2px; text-align: center;}
 
 @keyframes neonPulse{
 0%,100%{text-shadow:0 0 5px #c77dff,0 0 20px #c77dff,0 0 20px #c77dff;}
@@ -49,8 +49,8 @@ header{text-align:center; padding:40px 20px;}
 
 .card:hover{transform:translateY(-10px); box-shadow:0 0 20px #c77dff,0 0 60px rgba(199,125,255,.4);}
 
-.cardtext{font-family:'Rubik';font-weight: 600; font-size: 1.8rem; text-shadow: 0 0 10px palevioletred;}
-.cardsub{font-family: 'Pliant'; font-weight: 400; font-size: 1rem;}
+.cardtext{font-family:'Rubik';font-weight: 700; font-size: 1.8rem; text-shadow: 0 0 10px palevioletred;}
+.cardsub{font-family: 'Pliant'; font-weight: 600; font-size: 1rem;}
 
 .slider{margin-top:40px; height:950px; position:relative; overflow:hidden; border-radius:25px; border:1px solid rgba(199,125,255,.2); box-shadow:0 0 30px rgba(199,125,255,.2);}
 .slide{position:absolute; width:100%; height:100%; opacity:0; transform:scale(1.15) rotate(2deg); filter:blur(8px); transition:opacity 1s ease, transform 1.4s ease, filter 1.4s ease;}
